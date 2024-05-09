@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Khanya Somagaca</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Add any additional styles specific to the contact page here */
+        .contact-info {
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+        }
+        .contact-info li {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .contact-info li a {
+            color: white;
+            text-decoration: underline;
+        }
+        .contact-info h1{
+            font-size: 36px;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: red;
+            text-decoration: underline;
+            text-align: center;
+        }
+        .contact-form {
+    margin-top: 50px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* For blurry-transparent effect */
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form input[type="tel"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #ff6347; /* Red color */
+    color: white;
+    border: 2px solid #ff6347; /* Red color */
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #e74c3c; /* Darker red on hover */
+    border-color: #e74c3c; /* Darker red on hover */
+}
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <nav>
+                <h1>KHANYA SOMAGACA</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <h1>CONTACT INFORMATION</h1><br>
+                <ul>
+                    <li>Physical Address: 97 Durham street, Salt river, Cape Town</li>
+                    <li>Email: <a href="mailto:khanya.somagaca@capaciti.org.za">khanya.somagaca@capaciti.org.za</a></li>
+                    <li>Facebook: <a href="https://www.facebook.com/khanya.kheyda/">Khanya Kheyda</a></li>
+                    <li>Instagram: <a href="https://www.instagram.com/khanya_somagaca/">Khanya Somagaca</a></li>
+                    <li>Linkedin: <a href="https://za.linkedin.com/in/khanya-kheyda-687517180">Khanya Somagaca</a></li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <h2>Contact Form</h2>
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required><br>
+                    <input type="text" name="surname" placeholder="Your Surname" required><br>
+                    <input type="tel" name="phone" placeholder="Your Phone Number" required><br>
+                    <input type="email" name="email" placeholder="Your Email" required><br>
+                    <textarea name="message" placeholder="Your Message" required></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="Footercontainer">
+            <div class="FooterNav">
+                <ul>
+                    <li><a href="" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>  
+                </ul>
+            </div>
+        </div>
+        <div class="FooterBottom">
+            <p>Copyright &copy;2024: Designed by <span class="designer">Khanya Somagaca</span></p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript for form validation and submission handling
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // Fetch form values
+            var formData = new FormData(this);
+            // Convert formData to JSON
+            var jsonData = {};
+            formData.forEach(function(value, key) {
+                jsonData[key] = value;
+            });
+            // Here you can send the jsonData to your server using AJAX or perform any other action
+            // For demonstration, let's just log the data
+            console.log(jsonData);
+            // You can also show a success message to the user
+            alert("Your message has been sent successfully!");
+            // Clear form fields after submission
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <nav>
+                <h1>KHANYA SOMAGACA</h1>
+                <ul>
+                    <li><a href="" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="article">
+                    <h1>Hi, I'm <span>KHANYA SOMAGACA</span></h1>
+                    <h2>Software Developer</h2><br>
+                    <p>Welcome to my portfolio, where innovation meets precision in software engineering.<br>
+                        With a passion for problem-solving and a dedication to excellence,<br>
+                        I specialize in developing robust solutions tailored to meet the unique needs of each project.<br>
+                        Explore my work and discover how I can bring your ideas to<br> 
+                        life through <span>c</span>utting-edge technology and meticulous craftsmanship,<br>
+                        crafting elegant solutions through code to drive innovation and efficiency in every project.</p>
+                    <a href="" class="btn"><b>Hire Me</b></a>
+                    <a href="Resume/Khanya Somagaca Curriculum Vitae.pdf" class="btn" download><b>Download CV</b></a>
+                </div>
+                <div class="home-background">
+                    <img src="images/IMG-20240424-WA0064.jpg" alt="Home Background" class="me">
+                </div>
+            </div>
+            <div class="home-sci">
+                <a href="https://www.facebook.com/khanya.kheyda/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/khanya_somagaca/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://za.linkedin.com/in/khanya-kheyda-687517180"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            
+        </div>
+      
+    </section>
+    <footer>
+        <div class="Footercontainer">
+            <div class="FooterNav">
+                <ul>
+                    <li><a href="" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>  
+                </ul>
+            </div>
+        </div>
+        <div class="FooterBottom">
+            <p>Copyright &copy;2024: Designed by <span class="designer">Khanya Somagaca</span></p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to adjust image position
+        window.addEventListener('DOMContentLoaded', (event) => {
+            adjustImagePosition();
+        });
+
+        function adjustImagePosition() {
+            const article = document.querySelector('.article');
+            const homeBackground = document.querySelector('.home-background');
+
+            // Get the height of the article
+            const articleHeight = article.offsetHeight;
+
+            // Set the top position of homeBackground to be the same as articleHeight
+            homeBackground.style.top = articleHeight + 'px';
+        }
+    </script>
+</body>
+</html>
